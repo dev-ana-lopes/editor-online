@@ -1,0 +1,21 @@
+.container{
+    background-color: var(--background-primary);
+    
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "ambiente-editor"
+    "configuracao";
+}
+
+@media (min-width: 768px) {
+    /*personalização*/
+}
+
+@media (min-width: 1440px) {
+    .container {
+        grid-template-areas: 
+        "header"
+        "menu ambiente-editor configuracao";
+    }
+}

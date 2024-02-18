@@ -1,95 +1,73 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import "./styles/home.scss"
+import { Header } from "./componetes/header/header"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="container">
+
+      <Header/>
+
+      <div className="menu">
+        <div className="itens">
+          <a href="">Editor</a>
+        </div>
+
+        <div className="itens">
+          <a href="">Comunidade</a>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="ambiente-editor">
+        <div className="variavel-color">
+          <div className="editor">Seu código</div>
+        </div>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="botao-highlight">
+        <button>Visualizar com o highlight</button>
       </div>
+
+        <div className="configuracao">
+          <div className="projeto">
+            <div className="campos-texto">
+              <textarea name="nome-projeto" id="name" value="Nome do seu projeto"></textarea>
+            </div>
+            <div className="campos-texto">
+              <textarea name="descricao-projeto" id="descricao" value="Descrição do seu projeto"></textarea>
+          </div>
+        
+        </div>
+          <div className="personalizacao">
+            <div className="selecao-linguagem">
+              <select name="linguagens" id="linguagens">
+                <option value="sem selecao">----</option>
+                <option value="javascript">javascript</option>
+                <option value="java">java</option>
+                <option value="python">python</option>
+                <option value="C">C</option>
+              </select>
+            </div>
+            <div className="color">
+              <select name="colors" id="colors">
+                  <option value="sem selecao">----</option>
+                  <option value="azul-claro">azul-claro</option>
+                  <option value="amarelo">amarelo</option>
+                  <option value="rosa">rosa</option>
+                  <option value="beje">beje</option>
+                  <option value="verde">verde</option>
+                  <option value="roxo">roxo</option>
+                </select>
+            </div>
+
+            <div className="botao-salvar">
+              <button>Salvar projeto</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
     </main>
   );
 }
